@@ -1,31 +1,41 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div class="nav">
+      <div class="nav__social-media-links">
+        <SocialMediaLinks />
+      </div>
+      <div class="nav__navbar">
+        <Navbar />
+      </div>
     </div>
-    <router-view />
+    <div class="container">
+      <router-view />
+    </div>
   </div>
 </template>
 
+<script>
+import Navbar from "@/components/compound/Navbar";
+import SocialMediaLinks from "@/components/compound/SocialMediaLinks";
+
+export default {
+  name: "App",
+  components: { Navbar, SocialMediaLinks },
+};
+</script>
+
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  .nav {
+    &__social-media-links {
+      background: red;
+    }
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+    &__navbar {
+      background: black;
     }
   }
 }
