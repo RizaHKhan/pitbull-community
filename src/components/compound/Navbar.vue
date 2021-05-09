@@ -9,7 +9,7 @@
       <router-link to="/faq">FAQ</router-link>
     </div>
     <div class="navbar__burger-container" @click="menuOpen = !menuOpen">
-      <div class="burger"></div>
+      <div :class="menuOpen ? 'ex-close' : 'ex'"></div>
     </div>
   </div>
 </template>
@@ -82,34 +82,6 @@ export default {
       height: 20px;
     }
     margin: auto 0;
-
-    .burger {
-      position: relative;
-      margin: auto;
-      display: flex;
-      width: 20px;
-      height: 2px;
-      background: white;
-      border-radius: 10px;
-      transition: all 0.5s ease;
-
-      &:before,
-      &:after {
-        content: "";
-        width: 20px;
-        height: 2px;
-        background: white;
-        border-radius: 10px;
-        transition: all 0.5s ease;
-        position: absolute;
-        top: -6px;
-        left: 0;
-      }
-
-      &:after {
-        top: 6px;
-      }
-    }
   }
 }
 
