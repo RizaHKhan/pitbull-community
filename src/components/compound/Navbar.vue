@@ -1,6 +1,6 @@
 <template>
   <div class="navbar container">
-    <img src="../../assets/logo.png" class="navbar__img" />
+    <img src="../../assets/images/logo.png" class="navbar__img" />
     <div class="navbar__items" :class="menuOpen ? 'open' : ''">
       <router-link to="/">Home</router-link>
       <router-link to="/team">Team</router-link>

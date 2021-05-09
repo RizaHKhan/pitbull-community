@@ -10,7 +10,7 @@
     </div>
     <div class="jumbotron__right">
       <iframe v-if="iframeUrl" :src="iframeUrl" frameborder="0"></iframe>
-      <img v-if="imageUrl" :src="imageUrl" />
+      <img v-if="imageName" :src="imgUrl" />
     </div>
   </div>
 </template>
@@ -38,13 +38,18 @@ export default {
       type: String,
       default: "",
     },
-    imageUrl: {
+    imageName: {
       type: String,
       default: "",
     },
     actions: {
       type: Array,
       default: () => [],
+    },
+  },
+  computed: {
+    imgUrl() {
+      return require(`../../assets/images/${this.imageName}.png`);
     },
   },
 };
@@ -76,6 +81,7 @@ export default {
     iframe {
       width: 100%;
       height: 100%;
+      box-shadow: 1px 1px 14px 5px rgba(0, 0, 0, 0.44);
     }
   }
 }
