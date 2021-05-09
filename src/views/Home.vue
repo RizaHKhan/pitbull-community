@@ -111,6 +111,7 @@ export default {
   padding-top: 80px;
 
   &__cards {
+    padding: 1rem 0;
     display: grid;
     grid-gap: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));

@@ -47,6 +47,7 @@ export default {
   &__logo {
     height: 50px;
     object-fit: contain;
+    margin: 2rem 0;
   }
   &__description {
     width: 80%;

@@ -73,32 +73,49 @@ export default {
   background-position: 0px 0px, 50% 50%;
   background-size: auto, cover;
   background-attachment: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  background-blend-mode: darken;
 }
 .jumbotron {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: 4rem 0.5rem;
+  color: white;
 
   @include media-down(lg) {
     grid-template-columns: 1fr;
   }
 
   &__left {
+    @include media-down(md) {
+      text-align: center;
+    }
     &--title {
       font-size: 4rem;
+      margin: 2rem 0;
     }
 
     &--actions {
       display: flex;
       grid-gap: 0.2rem;
+      margin: 2rem 0;
+      @include media-down(md) {
+        justify-content: center;
+      }
     }
   }
 
   &__right {
+    display: flex;
     iframe {
       width: 100%;
       height: 100%;
       box-shadow: 1px 1px 14px 5px rgba(0, 0, 0, 0.44);
+    }
+
+    img {
+      max-width: 200px;
+      margin: auto;
     }
   }
 }
