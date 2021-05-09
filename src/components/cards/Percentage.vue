@@ -35,6 +35,7 @@ export default {
   text-align: center;
   transition: all 0.5s ease;
   width: 275px;
+  color: white;
 
   &__title {
     margin: auto;

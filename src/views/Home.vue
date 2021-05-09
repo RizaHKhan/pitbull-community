@@ -39,6 +39,26 @@ relinquishing ownership and burnt LP from the beginning of its creation."
       <Numbers :dollar="false" :num="5913" description="Hodlers" />
     </div>
 
+    <div class="landing__cards promotionals">
+      <Promotional
+        title="Buy Tokens"
+        logoName="dollar"
+        description="Buy $PIT tokens via pancakeswap v1 with BNB. Gas fees are pennies! Copy our contract below."
+      />
+
+      <Promotional
+        title="Hold it"
+        logoName="hand"
+        description="2% of each transaction will be distributed to all holders. Strong holder will watch their wallets grow!"
+      />
+
+      <Promotional
+        title="Spread the Word"
+        logoName="horn"
+        description="Share, retweet, repost on all social media channels. Rock our cool merch and spread the pitbullish!"
+      />
+    </div>
+
     <Jumbotron
       :actions="secondaryJumboActions"
       subtitle="Security"
@@ -53,11 +73,12 @@ relinquishing ownership and burnt LP from the beginning of its creation."
 <script>
 import Jumbotron from "@/components/compound/Jumbotron";
 import Percentage from "@/components/cards/Percentage";
+import Promotional from "@/components/cards/Promotional";
 import Numbers from "@/components/cards/Numbers";
 
 export default {
   name: "Home",
-  components: { Jumbotron, Percentage, Numbers },
+  components: { Jumbotron, Percentage, Numbers, Promotional },
   computed: {
     mainJumboActions() {
       const actions = [];
@@ -85,6 +106,9 @@ export default {
     grid-template-columns: repeat(3, 1fr);
   }
   .numbers {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .promotionals {
     grid-template-columns: repeat(3, 1fr);
   }
 }

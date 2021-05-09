@@ -1,33 +1,37 @@
 <template>
-  <div class="numbers">
-    <h1 class="numbers__num">
-      {{ dollar ? "$" : "" }}{{ num.toLocaleString() }}
-    </h1>
-    <p class="numbers__description">{{ description }}</p>
+  <div class="promotional">
+    <h2 class="promotional__title">{{ title }}</h2>
+    <img class="promotional__logo" :src="logoUrl" />
+    <p class="promotional__description">{{ description }}</p>
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    num: {
-      type: Number,
-      default: 0,
+    title: {
+      type: String,
+      default: "",
+    },
+    logoName: {
+      type: String,
+      default: "",
     },
     description: {
       type: String,
       default: "",
     },
-    dollar: {
-      type: Boolean,
-      default: true,
+  },
+  computed: {
+    logoUrl() {
+      return require(`@/assets/images/${this.logoName}.png`);
     },
   },
 };
 </script>
 
 <style lang="scss" scoped>
-.numbers {
+.promotional {
   padding: 0.5rem;
   display: flex;
   border-radius: 5px;
@@ -39,13 +43,10 @@ export default {
 
   &__title {
     margin: auto;
-    padding-bottom: 0.75rem;
-    border-bottom: 1px solid grey;
-    text-transform: uppercase;
   }
-  &__percent {
-    color: #1ac6b8;
-    font-size: 64px;
+  &__logo {
+    height: 50px;
+    object-fit: contain;
   }
   &__description {
     width: 80%;

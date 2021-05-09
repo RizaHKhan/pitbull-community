@@ -29,6 +29,7 @@ export default {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: black;
   .nav {
     &__social-media-links {
       background: #202020;
