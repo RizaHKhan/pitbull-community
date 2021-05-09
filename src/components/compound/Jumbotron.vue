@@ -51,8 +51,7 @@ export default {
     },
     backgroundImage: {
       type: String,
-      default:
-        "https://c8.alamy.com/comp/2E1WJ97/a-pit-bull-dog-sits-in-an-anemone-field-2E1WJ97.jpg",
+      default: "",
     },
   },
   computed: {

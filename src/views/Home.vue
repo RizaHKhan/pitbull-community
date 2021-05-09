@@ -7,6 +7,7 @@
       caption="zA community-driven defi project with the anonymous developer
 relinquishing ownership and burnt LP from the beginning of its creation."
       iframeUrl="https://www.youtube.com/embed/jqidVJnbkN0?rel=0&controls=1&autoplay=0&mute=0&start=0"
+      backgroundImage="https://c8.alamy.com/comp/2E1WJ97/a-pit-bull-dog-sits-in-an-anemone-field-2E1WJ97.jpg"
     />
 
     <div class="landing__cards percentages">
@@ -44,6 +45,7 @@ relinquishing ownership and burnt LP from the beginning of its creation."
       title="Techrate Audit"
       caption="As half of total supply has been burnt into a dead address in the beginning and the liquidity pool has been burnt, it is impossible to modify Pitbull's contract for further changes."
       imageName="guard"
+      backgroundImage="https://thumbs.dreamstime.com/z/white-dog-breed-pitbull-running-field-grass-wal-white-dog-breed-pitbull-running-field-grass-walk-117656984.jpg"
     />
   </div>
 </template>
