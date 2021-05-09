@@ -1,7 +1,12 @@
 <template>
   <div
     class="jumbotron_container"
-    :style="{ backgroundImage: 'url(' + backgroundImage + ')' }"
+    :style="{
+      backgroundImage:
+        'linear-gradient( 180deg, rgba(65, 4, 131, 0.86), rgba(26, 101, 198, 0.78)),url(' +
+        backgroundImage +
+        ')',
+    }"
   >
     <div class="jumbotron container">
       <div class="jumbotron__left">
@@ -73,8 +78,8 @@ export default {
   background-position: 0px 0px, 50% 50%;
   background-size: auto, cover;
   background-attachment: fixed;
-  background-color: rgba(0, 0, 0, 0.8);
-  background-blend-mode: darken;
+  /* background-color: rgba(0, 0, 0, 0.8); */
+  background-blend-mode: normal;
 }
 .jumbotron {
   display: grid;
