@@ -29,6 +29,15 @@ relinquishing ownership and burnt LP from the beginning of its creation."
       />
     </div>
 
+    <div class="landing__cards numbers">
+      <Numbers :num="0.212191" description="Price per Block" />
+      <Numbers :num="0.211291" description="Price per Block" />
+      <Numbers :num="9252092.613" description="Marketcap" />
+      <Numbers :dollar="false" :num="100000000" description="Total Supply" />
+      <Numbers :dollar="false" :num="5648974654132" description="Total Burnt" />
+      <Numbers :dollar="false" :num="5913" description="Hodlers" />
+    </div>
+
     <Jumbotron
       :actions="secondaryJumboActions"
       subtitle="Security"
@@ -42,10 +51,11 @@ relinquishing ownership and burnt LP from the beginning of its creation."
 <script>
 import Jumbotron from "@/components/compound/Jumbotron";
 import Percentage from "@/components/cards/Percentage";
+import Numbers from "@/components/cards/Numbers";
 
 export default {
   name: "Home",
-  components: { Jumbotron, Percentage },
+  components: { Jumbotron, Percentage, Numbers },
   computed: {
     mainJumboActions() {
       const actions = [];
@@ -66,6 +76,13 @@ export default {
 .landing {
   &__cards {
     display: grid;
+    grid-gap: 2rem;
+  }
+
+  .percentages {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .numbers {
     grid-template-columns: repeat(3, 1fr);
   }
 }

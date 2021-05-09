@@ -1,5 +1,8 @@
 <template>
-  <div class="jumbotron">
+  <div
+    class="jumbotron"
+    :style="{ backgroundImage: 'url(' + backgroundImage + ')' }"
+  >
     <div class="jumbotron__left">
       <p class="jumbotron__left--subtitle">{{ subtitle }}</p>
       <h1 class="jumbotron__left--title">{{ title }}</h1>
@@ -46,6 +49,11 @@ export default {
       type: Array,
       default: () => [],
     },
+    backgroundImage: {
+      type: String,
+      default:
+        "https://c8.alamy.com/comp/2E1WJ97/a-pit-bull-dog-sits-in-an-anemone-field-2E1WJ97.jpg",
+    },
   },
   computed: {
     imgUrl() {
@@ -57,7 +65,9 @@ export default {
 
 <style lang="scss" scoped>
 .jumbotron {
-  background-color: grey;
+  background-position: 0px 0px, 50% 50%;
+  background-size: auto, cover;
+  background-attachment: fixed;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: 4rem 0.5rem;
