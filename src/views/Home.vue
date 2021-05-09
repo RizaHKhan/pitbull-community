@@ -10,7 +10,7 @@ relinquishing ownership and burnt LP from the beginning of its creation."
       backgroundImage="https://c8.alamy.com/comp/2E1WJ97/a-pit-bull-dog-sits-in-an-anemone-field-2E1WJ97.jpg"
     />
 
-    <div class="landing__cards percentages">
+    <div class="landing__cards percentages container">
       <Percentage
         title="Reflection"
         :percent="2"
@@ -30,7 +30,7 @@ relinquishing ownership and burnt LP from the beginning of its creation."
       />
     </div>
 
-    <div class="landing__cards numbers">
+    <div class="landing__cards numbers container">
       <Numbers :num="0.212191" description="Price per Block" />
       <Numbers :num="0.211291" description="Price per Block" />
       <Numbers :num="9252092.613" description="Marketcap" />
@@ -39,7 +39,7 @@ relinquishing ownership and burnt LP from the beginning of its creation."
       <Numbers :dollar="false" :num="5913" description="Hodlers" />
     </div>
 
-    <div class="landing__cards promotionals">
+    <div class="landing__cards promotionals container">
       <Promotional
         title="Buy Tokens"
         logoName="dollar"
@@ -67,6 +67,8 @@ relinquishing ownership and burnt LP from the beginning of its creation."
       imageName="guard"
       backgroundImage="https://thumbs.dreamstime.com/z/white-dog-breed-pitbull-running-field-grass-wal-white-dog-breed-pitbull-running-field-grass-walk-117656984.jpg"
     />
+    <ContactForm />
+    <Footer />
   </div>
 </template>
 
@@ -75,10 +77,19 @@ import Jumbotron from "@/components/compound/Jumbotron";
 import Percentage from "@/components/cards/Percentage";
 import Promotional from "@/components/cards/Promotional";
 import Numbers from "@/components/cards/Numbers";
+import ContactForm from "@/components/compound/ContactForm";
+import Footer from "@/components/compound/Footer";
 
 export default {
   name: "Home",
-  components: { Jumbotron, Percentage, Numbers, Promotional },
+  components: {
+    Jumbotron,
+    Percentage,
+    Numbers,
+    Promotional,
+    ContactForm,
+    Footer,
+  },
   computed: {
     mainJumboActions() {
       const actions = [];
