@@ -4,7 +4,7 @@
       :actions="mainJumboActions"
       subtitle="Welcome to the"
       title="Pitbull Communicty"
-      caption="zA community-driven defi project with the anonymous developer
+      caption="A community-driven defi project with the anonymous developer
 relinquishing ownership and burnt LP from the beginning of its creation."
       iframeUrl="https://www.youtube.com/embed/jqidVJnbkN0?rel=0&controls=1&autoplay=0&mute=0&start=0"
       backgroundImage="https://c8.alamy.com/comp/2E1WJ97/a-pit-bull-dog-sits-in-an-anemone-field-2E1WJ97.jpg"
