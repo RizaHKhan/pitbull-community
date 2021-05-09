@@ -109,6 +109,10 @@ export default {
   padding: 2rem 0;
   color: white;
 
+  @include media-down(md) {
+    padding: 2rem;
+  }
+
   &__header {
     text-align: center;
     width: 80%;
@@ -124,11 +128,7 @@ export default {
     padding: 2rem 0;
     display: grid;
     grid-gap: 1rem;
-    grid-template-columns: 1fr;
-
-    @include media-up(lg) {
-      grid-template-columns: 1fr repeat(3, 150px);
-    }
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 
     h4 {
       color: #08b29f;
@@ -154,6 +154,15 @@ export default {
     &--legal {
       display: flex;
       justify-content: space-between;
+
+      @include media-down(md) {
+        text-align: center;
+        flex-direction: column;
+
+        p {
+          margin: 1rem 0;
+        }
+      }
 
       &--links {
         a {

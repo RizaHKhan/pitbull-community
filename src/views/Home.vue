@@ -108,6 +108,7 @@ export default {
 
 <style lang="scss" scoped>
 .landing {
+  padding-top: 80px;
   &__cards {
     display: grid;
     grid-gap: 2rem;

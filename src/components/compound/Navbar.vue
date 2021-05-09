@@ -27,11 +27,14 @@ export default {
 
 <style lang="scss" scoped>
 .navbar {
+  width: 100%;
   background: black;
-  position: relative;
+  position: fixed;
+  top: 40px;
   display: flex;
   justify-content: space-between;
   align-content: center;
+  padding: 1rem 0.5rem;
 
   &__img {
     height: 50px;
@@ -45,16 +48,18 @@ export default {
 
     @include media-down(md) {
       max-height: 0px;
+      overflow: hidden;
       position: absolute;
       width: 100%;
-      top: 58px;
-      overflow: hidden;
+      top: 80px;
+      left: 0;
       transition: all 0.5s ease;
       background: black;
       justify-content: center;
     }
 
     @include media-down(sm) {
+      top: 80px;
       flex-direction: column;
       text-align: center;
     }
@@ -87,5 +92,6 @@ export default {
 
 .open {
   max-height: 1000px;
+  padding-bottom: 1rem;
 }
 </style>
