@@ -1,19 +1,25 @@
 <template>
   <div
-    class="jumbotron"
+    class="jumbotron_container"
     :style="{ backgroundImage: 'url(' + backgroundImage + ')' }"
   >
-    <div class="jumbotron__left">
-      <p class="jumbotron__left--subtitle">{{ subtitle }}</p>
-      <h1 class="jumbotron__left--title">{{ title }}</h1>
-      <p class="jumbotron__left--caption">{{ caption }}</p>
-      <div class="jumbotron__left--actions" v-if="actions.length">
-        <Button :text="action.text" v-for="(action, id) in actions" :key="id" />
+    <div class="jumbotron container">
+      <div class="jumbotron__left">
+        <p class="jumbotron__left--subtitle">{{ subtitle }}</p>
+        <h1 class="jumbotron__left--title">{{ title }}</h1>
+        <p class="jumbotron__left--caption">{{ caption }}</p>
+        <div class="jumbotron__left--actions" v-if="actions.length">
+          <Button
+            :text="action.text"
+            v-for="(action, id) in actions"
+            :key="id"
+          />
+        </div>
       </div>
-    </div>
-    <div class="jumbotron__right">
-      <iframe v-if="iframeUrl" :src="iframeUrl" frameborder="0"></iframe>
-      <img v-if="imageName" :src="imgUrl" />
+      <div class="jumbotron__right">
+        <iframe v-if="iframeUrl" :src="iframeUrl" frameborder="0"></iframe>
+        <img v-if="imageName" :src="imgUrl" />
+      </div>
     </div>
   </div>
 </template>
@@ -63,10 +69,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.jumbotron {
+.jumbotron_container {
   background-position: 0px 0px, 50% 50%;
   background-size: auto, cover;
   background-attachment: fixed;
+}
+.jumbotron {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: 4rem 0.5rem;

@@ -8,7 +8,7 @@
         <Navbar />
       </div>
     </div>
-    <div class="container">
+    <div>
       <router-view />
     </div>
   </div>
