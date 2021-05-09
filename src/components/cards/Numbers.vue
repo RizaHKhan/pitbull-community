@@ -36,6 +36,12 @@ export default {
   transition: all 0.5s ease;
   width: 275px;
   color: white;
+  transition: all 0.5s ease;
+  background-color: rgba(20, 20, 20, 0.8);
+
+  &:hover {
+    background-color: rgba(20, 20, 20, 1);
+  }
 
   &__title {
     margin: auto;
@@ -43,9 +49,9 @@ export default {
     border-bottom: 1px solid grey;
     text-transform: uppercase;
   }
-  &__percent {
+  &__num {
     color: #1ac6b8;
-    font-size: 64px;
+    font-size: 1.5rem;
   }
   &__description {
     width: 80%;

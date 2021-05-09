@@ -109,19 +109,15 @@ export default {
 <style lang="scss" scoped>
 .landing {
   padding-top: 80px;
+
   &__cards {
     display: grid;
     grid-gap: 2rem;
-  }
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 
-  .percentages {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .numbers {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .promotionals {
-    grid-template-columns: repeat(3, 1fr);
+    div {
+      margin: auto;
+    }
   }
 }
 </style>

@@ -126,13 +126,19 @@ export default {
 
   &__links {
     padding: 2rem 0;
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    display: flex;
+    grid-gap: 4rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* grid-template-columns: repeat(auto-fill, minmax(300px, 400px)); */
 
     h4 {
       color: #08b29f;
       margin: 1rem 0;
+    }
+
+    p {
+      max-width: 400px;
     }
 
     a {
