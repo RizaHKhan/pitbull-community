@@ -12,6 +12,5 @@ export default {
 
 <style lang="scss" scoped>
 .landing {
-  border: solid 1px red;
 }
 </style>

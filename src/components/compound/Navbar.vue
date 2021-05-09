@@ -1,12 +1,15 @@
 <template>
   <div class="navbar container">
     <img src="../../assets/logo.png" class="navbar__img" />
-    <div class="navbar__items">
+    <div class="navbar__items" :class="menuOpen ? 'open' : ''">
       <router-link to="/">Home</router-link>
       <router-link to="/team">Team</router-link>
       <router-link to="/Audit">Audit</router-link>
       <router-link to="/contact">Contact</router-link>
       <router-link to="/faq">FAQ</router-link>
+    </div>
+    <div class="navbar__burger-container" @click="menuOpen = !menuOpen">
+      <div class="burger"></div>
     </div>
   </div>
 </template>
@@ -14,12 +17,18 @@
 <script>
 export default {
   name: "Navbar",
+  data() {
+    return {
+      menuOpen: false,
+    };
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .navbar {
   background: black;
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-content: center;
@@ -33,6 +42,23 @@ export default {
     margin: auto 0;
     display: flex;
     grid-gap: 1rem;
+
+    @include media-down(md) {
+      max-height: 0px;
+      position: absolute;
+      width: 100%;
+      top: 58px;
+      overflow: hidden;
+      transition: all 0.5s ease;
+      background: black;
+      justify-content: center;
+    }
+
+    @include media-down(sm) {
+      flex-direction: column;
+      text-align: center;
+    }
+
     a {
       text-decoration: none;
       color: white;
@@ -43,5 +69,51 @@ export default {
       }
     }
   }
+
+  &__burger-container {
+    display: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    @include media-down(md) {
+      display: flex;
+      height: 20px;
+    }
+    margin: auto 0;
+
+    .burger {
+      position: relative;
+      margin: auto;
+      display: flex;
+      width: 20px;
+      height: 2px;
+      background: white;
+      border-radius: 10px;
+      transition: all 0.5s ease;
+
+      &:before,
+      &:after {
+        content: "";
+        width: 20px;
+        height: 2px;
+        background: white;
+        border-radius: 10px;
+        transition: all 0.5s ease;
+        position: absolute;
+        top: -6px;
+        left: 0;
+      }
+
+      &:after {
+        top: 6px;
+      }
+    }
+  }
+}
+
+.open {
+  max-height: 1000px;
 }
 </style>
