@@ -31,11 +31,13 @@ export default {
   flex-direction: column;
   .nav {
     &__social-media-links {
-      background: red;
+      background: #202020;
+      padding: 0.5rem 0;
     }
 
     &__navbar {
       background: black;
+      padding: 0.5rem 0;
     }
   }
 }

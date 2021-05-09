@@ -1,5 +1,9 @@
 <template>
-  <div class="social-media container">Social media icons go here</div>
+  <div class="social-media container">
+    <font-awesome-icon :icon="['fab', 'instagram']" />
+    <font-awesome-icon :icon="['fab', 'discord']" />
+    <font-awesome-icon :icon="['fab', 'twitter']" />
+  </div>
 </template>
 
 <script>
@@ -11,6 +15,17 @@ export default {
 <style lang="scss" scoped>
 .social-media {
   display: flex;
+  grid-gap: 1rem;
   justify-content: flex-end;
+  font-size: 1.75rem;
+  color: white;
+
+  svg {
+    transition: transform 0.5s ease;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.2);
+    }
+  }
 }
 </style>
