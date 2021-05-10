@@ -114,7 +114,7 @@ export default {
     padding: 1rem 0;
     display: grid;
     grid-gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 
     div {
       margin: auto;
